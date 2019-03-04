@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContinueActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:text="Welcome to the HauzRent App"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="1dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="How much is your rent ?"
+        android:textSize="27sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="164dp" />
+
+    <EditText
+        android:id="@+id/Rent"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="257dp"
+        android:hint="Rent..."/>
+
+    <EditText
+        android:id="@+id/address"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:hint="Address"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="345dp" />
+
+
+    <TextView
+        android:id="@+id/greetings"
+        android:layout_width="278dp"
+        android:layout_height="59dp"
+        android:text="Hello"
+        android:textSize="27sp"
+        tools:layout_editor_absoluteX="53dp"
+        tools:layout_editor_absoluteY="84dp" />
+
+    <Button
+        android:id="@+id/nextPage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Continue"/>
+
+
+
+</android.support.constraint.ConstraintLayout>
