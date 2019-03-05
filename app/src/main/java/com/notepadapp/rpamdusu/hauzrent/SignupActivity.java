@@ -62,7 +62,6 @@ public class SignupActivity extends AppCompatActivity {
 
     private void dbintent() {
         Intent intent = new Intent(SignupActivity.this, ContinueActivity.class);
-        intent.putExtra(INTENT_KEY, hPass );
         startActivity(intent);
     }
 

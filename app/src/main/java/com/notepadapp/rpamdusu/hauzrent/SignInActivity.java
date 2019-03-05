@@ -15,7 +15,7 @@ public class SignInActivity extends AppCompatActivity {
     
     private static final String DATABASE_NAME = "CopernicusDB.sqlite";
     private static final String DATABASE_TABLE = "TimeReportTable";
-    private static final int    DATABASE_VERSION = 1;
+    private static final int  DATABASE_VERSION = 1;
      private EditText uName,passCode;
      private Button signIn;
 

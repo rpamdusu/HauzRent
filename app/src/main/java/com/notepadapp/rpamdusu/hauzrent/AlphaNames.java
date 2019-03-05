@@ -19,6 +19,28 @@ public class AlphaNames extends SQLiteOpenHelper   {
      public static final String COL_4 = "EMAIL";
      public static final String COL_5 = "PASSWORD";
 
+    private String CREATE_CLIENT_TABLE = "create table"+CLIENT_TABLLE+"("+COL_1+"integer primary key"+COL_2+" text unique not null  "
+            +COL_3+"long char unique not null"+ COL_4+" long string unique not null"+ COL_5+"not null string ";
+
+
+    public static final String BREAD_TABLE = "PRIVATE_TABLE";
+    public static final String COL_6 = "BVN";
+    public static final String COL_7 = "ADDRESS";
+    public static final String COL_9 = "PHONE";
+
+    private String CREATE_BREAD_TABLE = "create table"+BREAD_TABLE+"("+COL_6+"integer unique not null"
+            +COL_7+"long string unique not null"
+            + COL_9+"integer unique not null )";
+
+
+    public static final String RENT_TABLE = "MONEY_TABLE";
+    public static final String COL_10 = "RENT_DUE_DATE";
+    public static final String COL_11 = "RENT_MONEY";
+    public static final String COL_12 = "RENT_MONEY_MONTHLY";
+
+
+    private String CREATE_RENT_TABLE = "create table"+ RENT_TABLE+"("+ COL_10+"integer not null  unique"+
+            COL_11+"integer not null unique"+COL_12+"integer not null unique)";
      public  static final int DATABASE_VERSION = 1;
 
 
@@ -35,8 +57,10 @@ public class AlphaNames extends SQLiteOpenHelper   {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table "+CLIENT_TABLLE+ "(ID INTEGER PRIMARY KEY AUTOINCREMENT,FIRST_NAME TEXT UNIQUE NOT NULL,SURNAME TEXT UNIQUE NOT NULL," +
-                "EMAIL TEXT UNIQUE NOT  NULL, PASSWORD TEXT UNIQUE NOT NULL)");
+        db.execSQL(CREATE_CLIENT_TABLE);
+        db.execSQL(CREATE_BREAD_TABLE);
+        db.execSQL(CREATE_RENT_TABLE);
+
 
     }
 
@@ -48,14 +72,16 @@ public class AlphaNames extends SQLiteOpenHelper   {
     onCreate(db);
     }
 
-    public boolean insertData(String first_name,String surname,String email,String password ) {
+    public boolean insertData(String first_name,String surname,String email,String password) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(COL_2,first_name);
         contentValues.put(COL_3,surname);
         contentValues.put(COL_4,email);
         contentValues.put(COL_5, password);
-        long result = db.insert(CLIENTDATABASE_NAME,null ,contentValues);
+
+
+        long result = db.insert(CLIENT_TABLLE,null ,contentValues);
         if(result == -1)
             return false;
         else
@@ -64,7 +90,7 @@ public class AlphaNames extends SQLiteOpenHelper   {
 
     public Cursor getAllData() {
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor res = db.rawQuery("select * from "+CLIENTDATABASE_NAME,null);
+        Cursor res = db.rawQuery("select * from "+CLIENT_TABLLE,null);
         return res;
     }
     public boolean updateData(String id,String first_name,String surname,String email,String password) {
@@ -76,13 +102,29 @@ public class AlphaNames extends SQLiteOpenHelper   {
         contentValues.put(COL_4,email);
         contentValues.put(COL_5, password);
 
-        db.update(CLIENTDATABASE_NAME, contentValues, "ID = ?",new String[] { id });
+        db.update(CLIENT_TABLLE, contentValues, "ID = ?",new String[] { id });
         return true;
     }
     public Integer deleteData (String id) {
         SQLiteDatabase db = this.getWritableDatabase();
-        return db.delete(CLIENTDATABASE_NAME, "ID = ?",new String[] {id});
+        return db.delete(CLIENT_TABLLE, "ID = ?",new String[] {id});
     }
+
+
+    public boolean insertPData(Integer yBVN, String yaddy, Integer yPhone) {
+    SQLiteDatabase db = this.getWritableDatabase();
+    ContentValues contentValues = new ContentValues();
+    contentValues.put(COL_6, yBVN);
+    contentValues.put(COL_7, yaddy);
+    contentValues.put(COL_9, yPhone);
+    long result = db.insert(BREAD_TABLE,null, contentValues);
+    if (result ==-1)
+    return false;
+    else
+        return true;
+    }
+
+
 
 }
 

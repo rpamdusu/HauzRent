@@ -7,54 +7,57 @@
     tools:context=".ContinueActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/HR_logo"
         android:layout_width="match_parent"
         android:layout_height="58dp"
         android:text="Welcome to the HauzRent App"
         android:textSize="30sp"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="1dp" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="How much is your rent ?"
-        android:textSize="27sp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="164dp" />
+        tools:layout_editor_absoluteY="16dp" />
 
     <EditText
-        android:id="@+id/Rent"
+        android:id="@+id/bvn"
         android:layout_width="match_parent"
-        android:layout_height="66dp"
+        android:layout_height="54dp"
+        android:hint="BVN"
         tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="257dp"
-        android:hint="Rent..."/>
+        tools:layout_editor_absoluteY="269dp" />
 
     <EditText
         android:id="@+id/address"
         android:layout_width="match_parent"
         android:layout_height="59dp"
-        android:hint="Address"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="345dp" />
+        android:hint=" House Address"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="369dp" />
 
 
     <TextView
         android:id="@+id/greetings"
-        android:layout_width="278dp"
-        android:layout_height="59dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Hello"
         android:textSize="27sp"
-        tools:layout_editor_absoluteX="53dp"
-        tools:layout_editor_absoluteY="84dp" />
+        tools:layout_editor_absoluteX="165dp"
+        tools:layout_editor_absoluteY="96dp" />
 
     <Button
         android:id="@+id/nextPage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Continue"/>
+        android:text="Continue"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="638dp" />
 
+    <EditText
+        android:id="@+id/client_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Phone Number "
+        android:inputType="number"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="472dp" />
 
 
 </android.support.constraint.ConstraintLayout>
