@@ -43,21 +43,20 @@ public class ContinueActivity extends AppCompatActivity {
                next.setOnClickListener(new View.OnClickListener() {
                    @Override
                    public void onClick(View view) {
-                       boolean enter = PDatadb.insertPData(yBVN,yaddy,yPhone);
-                       if (enter == true){
-                           Toast.makeText(ContinueActivity.this, "Very Good", Toast.LENGTH_SHORT).show();
-                       }
-                       else
-                           Toast.makeText(ContinueActivity.this, "Fill It Out", Toast.LENGTH_SHORT).show();
-                       dIntent();
+
+                       Intent intent = new Intent(ContinueActivity.this, CContinueActivity.class);
+                       startActivity(intent);
+                       //boolean enter = PDatadb.insertPData(yBVN,yaddy,yPhone);
+                       //if (enter == true){
+                         //  Toast.makeText(ContinueActivity.this, "Very Good", Toast.LENGTH_SHORT).show();
+                       ///}
+                       //else
+                         //  Toast.makeText(ContinueActivity.this, "Fill It Out", Toast.LENGTH_SHORT).show();
+
                    }
                });
         }
 
 
 
-    private void dIntent() {
-        Intent intent = getIntent(ContinueActivity.this, new CContinueActivity);
-        startActivity(intent);
-    }
 }

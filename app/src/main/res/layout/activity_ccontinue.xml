@@ -1,46 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F0CB61"
+    android:orientation="vertical"
     tools:context=".CContinueActivity">
-
-
-    <Button
-        android:id="@+id/rent_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="572dp" />
-
-
 
     <EditText
         android:id="@+id/rent_due_date"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
+        android:layout_height="59dp"
+        android:layout_marginHorizontal="26sp"
+        android:layout_marginTop="50dp"
+        android:background="#95FFFFFF"
+        android:hint="Due Date"
         android:inputType="date"
+        android:paddingHorizontal="13sp"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="201dp" />
+        tools:layout_editor_absoluteY="400dp" />
 
     <EditText
         android:id="@+id/rent_money"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="59dp"
+        android:layout_marginHorizontal="26sp"
+        android:layout_marginTop="40dp"
+        android:background="#95FFFFFF"
         android:ems="10"
+        android:hint="Rent To Pay"
         android:inputType="number"
-        tools:layout_editor_absoluteX="98dp"
+        android:paddingHorizontal="13sp"
+        tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="471dp" />
 
     <EditText
         android:id="@+id/rent_pm"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
+        android:layout_height="59dp"
+        android:background="#95FFFFFF"
+        android:layout_marginHorizontal="26sp"
+        android:layout_marginTop="40dp"
+        android:hint="Rent per Month"
+        android:paddingHorizontal="13sp"
         android:inputType="number"
         tools:layout_editor_absoluteX="98dp"
         tools:layout_editor_absoluteY="342dp" />
-</android.support.constraint.ConstraintLayout>
+
+
+    <Button
+    android:id="@+id/rent_button"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Pay up"
+
+        android:padding="20sp"
+        android:layout_marginHorizontal="28sp"
+        android:layout_marginVertical="2sp"
+    tools:layout_editor_absoluteX="161dp"
+    tools:layout_editor_absoluteY="572dp" />
+
+</LinearLayout>

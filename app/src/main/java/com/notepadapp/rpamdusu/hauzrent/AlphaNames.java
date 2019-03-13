@@ -8,6 +8,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.provider.BaseColumns;
 
+import java.sql.Date;
+
 public class AlphaNames extends SQLiteOpenHelper   {
 
     
@@ -23,10 +25,10 @@ public class AlphaNames extends SQLiteOpenHelper   {
             +COL_3+"long char unique not null"+ COL_4+" long string unique not null"+ COL_5+"not null string ";
 
 
-    public static final String BREAD_TABLE = "PRIVATE_TABLE";
-    public static final String COL_6 = "BVN";
-    public static final String COL_7 = "ADDRESS";
-    public static final String COL_9 = "PHONE";
+    protected static final String BREAD_TABLE = "PRIVATE_TABLE";
+    protected static final String COL_6 = "BVN";
+    protected static final String COL_7 = "ADDRESS";
+    protected static final String COL_9 = "PHONE";
 
     private String CREATE_BREAD_TABLE = "create table"+BREAD_TABLE+"("+COL_6+"integer unique not null"
             +COL_7+"long string unique not null"
@@ -39,7 +41,7 @@ public class AlphaNames extends SQLiteOpenHelper   {
     public static final String COL_12 = "RENT_MONEY_MONTHLY";
 
 
-    private String CREATE_RENT_TABLE = "create table"+ RENT_TABLE+"("+ COL_10+"integer not null  unique"+
+    private String CREATE_RENT_TABLE = "create table"+ RENT_TABLE+"("+ COL_10+"Integer not null  unique"+
             COL_11+"integer not null unique"+COL_12+"integer not null unique)";
      public  static final int DATABASE_VERSION = 1;
 
@@ -48,8 +50,6 @@ public class AlphaNames extends SQLiteOpenHelper   {
         super(context, CLIENTDATABASE_NAME, null, 1);
         //for logging
         SQLiteDatabase db = this.getWritableDatabase();
-
-
 
     }
 
@@ -124,6 +124,19 @@ public class AlphaNames extends SQLiteOpenHelper   {
         return true;
     }
 
+
+    public boolean insertRData(Integer r_due_date, Integer r_money, Integer rpm  ) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(COL_10, r_due_date );
+        contentValues.put(COL_11, r_money);
+        contentValues.put(COL_12, rpm);
+        long result = db.insert(BREAD_TABLE,null, contentValues);
+        if (result ==-1)
+            return false;
+        else
+            return true;
+    }
 
 
 }
