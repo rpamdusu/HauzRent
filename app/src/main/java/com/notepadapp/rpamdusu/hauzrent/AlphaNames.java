@@ -21,8 +21,10 @@ public class AlphaNames extends SQLiteOpenHelper   {
      public static final String COL_4 = "EMAIL";
      public static final String COL_5 = "PASSWORD";
 
-    private String CREATE_CLIENT_TABLE = "create table"+CLIENT_TABLLE+"("+COL_1+"integer primary key"+COL_2+" text unique not null  "
-            +COL_3+"long char unique not null"+ COL_4+" long string unique not null"+ COL_5+"not null string ";
+    private String CREATE_CLIENT_TABLE = "create Table"+CLIENT_TABLLE+"("+COL_1+"integer primary key"
+            +COL_2+" text unique not null  "
+            +COL_3+"long char unique not null"+ COL_4+" long string unique not null"
+            + COL_5+"not null string ";
 
 
     protected static final String BREAD_TABLE = "PRIVATE_TABLE";
@@ -49,7 +51,7 @@ public class AlphaNames extends SQLiteOpenHelper   {
     public AlphaNames( Context context) {
         super(context, CLIENTDATABASE_NAME, null, 1);
         //for logging
-        SQLiteDatabase db = this.getWritableDatabase();
+
 
     }
 

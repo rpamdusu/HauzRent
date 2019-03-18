@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "743262803330",
+    "firebase_url": "https://hauzrent.firebaseio.com",
+    "project_id": "hauzrent",
+    "storage_bucket": "hauzrent.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:743262803330:android:c56616a624b94211",
+        "android_client_info": {
+          "package_name": "com.notepadapp.rpamdusu.hauzrent"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "743262803330-pl6qu1em1jk23ncmj8mjqakim6cflah6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.notepadapp.rpamdusu.hauzrent",
+            "certificate_hash": "eba1cdec759e202450e177cc06db108561717755"
+          }
+        },
+        {
+          "client_id": "743262803330-eboh16a2aq06dm9ng6oaot2q594qlk0e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-have1-_mC0XDVj1i-tA6tCsGYIsLIWE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "743262803330-eboh16a2aq06dm9ng6oaot2q594qlk0e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

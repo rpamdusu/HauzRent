@@ -37,7 +37,7 @@
         tools:layout_editor_absoluteY="200dp" />
 
     <EditText
-        android:id="@+id/email_add"
+        android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:layout_marginHorizontal="50px"
@@ -51,7 +51,7 @@
         tools:layout_editor_absoluteY="304dp" />
 
     <EditText
-        android:id="@+id/passkey"
+        android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:hint="Password"

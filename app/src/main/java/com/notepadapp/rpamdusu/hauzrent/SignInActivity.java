@@ -34,7 +34,9 @@ public class SignInActivity extends AppCompatActivity {
       signIn.setOnClickListener(new View.OnClickListener() {
           @Override
           public void onClick(View view) {
+
               Intent signIntent = new Intent(SignInActivity.this , DashboardActivity.class);
+              startActivity(signIntent);
           }
       });
 

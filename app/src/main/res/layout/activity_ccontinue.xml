@@ -45,6 +45,7 @@
         android:hint="Rent per Month"
         android:paddingHorizontal="13sp"
         android:inputType="number"
+        android:layout_marginBottom="30sp"
         tools:layout_editor_absoluteX="98dp"
         tools:layout_editor_absoluteY="342dp" />
 

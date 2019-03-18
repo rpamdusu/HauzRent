@@ -35,23 +35,24 @@ public class ContinueActivity extends AppCompatActivity {
 
 
 
-       final Integer yBVN = Bvn.getInputType();
+       final String yBVN = Bvn.getText().toString();
        final String yaddy = addy.getText().toString();
-       final Integer yPhone = phone.getInputType();
+       final String yPhone = phone.getText().toString();
 
 
                next.setOnClickListener(new View.OnClickListener() {
                    @Override
                    public void onClick(View view) {
 
-                       Intent intent = new Intent(ContinueActivity.this, CContinueActivity.class);
-                       startActivity(intent);
-                       //boolean enter = PDatadb.insertPData(yBVN,yaddy,yPhone);
-                       //if (enter == true){
-                         //  Toast.makeText(ContinueActivity.this, "Very Good", Toast.LENGTH_SHORT).show();
-                       ///}
-                       //else
-                         //  Toast.makeText(ContinueActivity.this, "Fill It Out", Toast.LENGTH_SHORT).show();
+
+                       if (yaddy.isEmpty()||yBVN.isEmpty()||yPhone.isEmpty()){
+                           Toast.makeText(ContinueActivity.this, "Very Good", Toast.LENGTH_SHORT).show();
+                       }
+                       if (!yaddy.isEmpty()||!yBVN.isEmpty()||!yPhone.isEmpty())
+                           Toast.makeText(ContinueActivity.this, "Fill It Out", Toast.LENGTH_SHORT).show();
+
+                           Intent intent = new Intent(ContinueActivity.this, CContinueActivity.class);
+                           startActivity(intent);
 
                    }
                });
